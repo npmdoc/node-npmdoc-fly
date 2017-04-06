@@ -1,0 +1,992 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/flyjs/fly"
+
+    >fly (v2.0.5)</a>
+</h1>
+<h4>Generator & Coroutine-based build system. Fasten your seatbelt.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fly">module fly</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.task">
+            function <span class="apidocSignatureSpan">fly.</span>task
+            <span class="apidocSignatureSpan">(fly)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fly.</span>fmt</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fly.</span>fn</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fly.</span>plugins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fly.</span>task.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fly.fmt">module fly.fmt</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fmt.complete">
+            function <span class="apidocSignatureSpan">fly.fmt.</span>complete
+            <span class="apidocSignatureSpan">{{signature}}</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fmt.error">
+            function <span class="apidocSignatureSpan">fly.fmt.</span>error
+            <span class="apidocSignatureSpan">{{signature}}</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fmt.path">
+            function <span class="apidocSignatureSpan">fly.fmt.</span>path
+            <span class="apidocSignatureSpan">{{signature}}</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fmt.text">
+            function <span class="apidocSignatureSpan">fly.fmt.</span>text
+            <span class="apidocSignatureSpan">{{signature}}</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fmt.time">
+            function <span class="apidocSignatureSpan">fly.fmt.</span>time
+            <span class="apidocSignatureSpan">{{signature}}</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fmt.title">
+            function <span class="apidocSignatureSpan">fly.fmt.</span>title
+            <span class="apidocSignatureSpan">{{signature}}</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fmt.warn">
+            function <span class="apidocSignatureSpan">fly.fmt.</span>warn
+            <span class="apidocSignatureSpan">{{signature}}</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fly.fn">module fly.fn</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fn.flatten">
+            function <span class="apidocSignatureSpan">fly.fn.</span>flatten
+            <span class="apidocSignatureSpan">(arr, [])</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fn.formatTime">
+            function <span class="apidocSignatureSpan">fly.fn.</span>formatTime
+            <span class="apidocSignatureSpan">(arr[1] / 1000000)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fn.getTime">
+            function <span class="apidocSignatureSpan">fly.fn.</span>getTime
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fn.getUniques">
+            function <span class="apidocSignatureSpan">fly.fn.</span>getUniques
+            <span class="apidocSignatureSpan">(; i &#x3c; len; i++)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fn.isEmptyObj">
+            function <span class="apidocSignatureSpan">fly.fn.</span>isEmptyObj
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fn.isObject">
+            function <span class="apidocSignatureSpan">fly.fn.</span>isObject
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fn.toArray">
+            function <span class="apidocSignatureSpan">fly.fn.</span>toArray
+            <span class="apidocSignatureSpan">(val === null || val === undefined)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.fn.valUniq">
+            function <span class="apidocSignatureSpan">fly.fn.</span>valUniq
+            <span class="apidocSignatureSpan">(val, arr)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fly.plugins">module fly.plugins</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.plugins.getDependencies">
+            function <span class="apidocSignatureSpan">fly.plugins.</span>getDependencies
+            <span class="apidocSignatureSpan">(pkg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.plugins.getPackage">
+            function <span class="apidocSignatureSpan">fly.plugins.</span>getPackage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.plugins.load">
+            function <span class="apidocSignatureSpan">fly.plugins.</span>load
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fly.task">module fly.task</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.task.task">
+            function <span class="apidocSignatureSpan">fly.</span>task
+            <span class="apidocSignatureSpan">(fly)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fly.task.prototype">module fly.task.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.task.prototype.exec">
+            function <span class="apidocSignatureSpan">fly.task.prototype.</span>exec
+            <span class="apidocSignatureSpan">(fn, opts, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.task.prototype.run">
+            function <span class="apidocSignatureSpan">fly.task.prototype.</span>run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.task.prototype.source">
+            function <span class="apidocSignatureSpan">fly.task.prototype.</span>source
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fly.task.prototype.target">
+            function <span class="apidocSignatureSpan">fly.task.prototype.</span>target
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fly" id="apidoc.module.fly">module fly</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fly.task" id="apidoc.element.fly.task">
+        function <span class="apidocSignatureSpan">fly.</span>task
+        <span class="apidocSignatureSpan">(fly)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Task(fly) {
+	// construct shape
+	this.$ = util
+	this.root = fly.root
+	this._ = {files: [], globs: [], prevs: []}
+	// attach parent fns to Task
+	this.parallel = fly.parallel.bind(fly)
+	this.serial = fly.serial.bind(fly)
+	this.start = fly.start.bind(fly)
+	this.emit = fly.emit.bind(fly)
+	// attach `fly.plugins` to prototype
+	for (const k in fly.plugins) {
+		this[k] = fly.plugins[k].bind(this)
+	}
+	// return chained methods + shared
+	return boot(this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fly.fmt" id="apidoc.module.fly.fmt">module fly.fmt</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fmt.complete" id="apidoc.element.fly.fmt.complete">
+        function <span class="apidocSignatureSpan">fly.fmt.</span>complete
+        <span class="apidocSignatureSpan">{{signature}}</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">[34m[1m[22m</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		.on(&#x22;task_start&#x22;, str =&#x3e; {
+			$.log(`Starting ${fmt.title(str)}`)
+		})
+
+		.on(&#x22;task_complete&#x22;, (str, time) =&#x3e; {
+			const t = formatTime(time)
+			$.log(`Finished ${fmt.<span class="apidocCodeKeywordSpan">complete</span>(str)} in ${fmt.time(t)}`)
+		})
+
+		.on(&#x22;task_not_found&#x22;, str =&#x3e; {
+			$.log(`${fmt.error(str)} not found in Flyfile.`)
+			process.exit(1)
+		})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fmt.error" id="apidoc.element.fly.fmt.error">
+        function <span class="apidocSignatureSpan">fly.fmt.</span>error
+        <span class="apidocSignatureSpan">{{signature}}</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">[1m[31m[39m</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+function getDependencies(pkg) {
+	if (!pkg) {
+		return []
+	}
+
+	if (!isObject(pkg)) {
+		$.<span class="apidocCodeKeywordSpan">error</span>(&#x22;Content from `package.json` must be an `Object`!&#x22;)
+		return []
+	}
+
+	// get all possible dependencies
+	const deps = [&#x22;dependencies&#x22;, &#x22;devDependencies&#x22;, &#x22;peerDependencies&#x22;]
+		.filter(key =&#x3e; key in pkg).map(dep =&#x3e; Object.keys(pkg[dep]))
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fmt.path" id="apidoc.element.fly.fmt.path">
+        function <span class="apidocSignatureSpan">fly.fmt.</span>path
+        <span class="apidocSignatureSpan">{{signature}}</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">[4m[36m[39m</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const fmt = require(&#x22;./fmt&#x22;)
+const $ = require(&#x22;./utils/logging&#x22;)
+const formatTime = require(&#x22;./fn&#x22;).formatTime
+
+module.exports = function () {
+	return this
+		.on(&#x22;fly_run&#x22;, file =&#x3e; {
+			$.log(`Flying with ${fmt.<span class="apidocCodeKeywordSpan">path</span>(file)}`)
+		})
+
+		.on(&#x22;flyfile_not_found&#x22;, () =&#x3e; {
+			$.log(&#x22;Flyfile not found!&#x22;)
+			process.exit(1)
+		})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fmt.text" id="apidoc.element.fly.fmt.text">
+        function <span class="apidocSignatureSpan">fly.fmt.</span>text
+        <span class="apidocSignatureSpan">{{signature}}</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">[1m[37m[39m</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fmt.time" id="apidoc.element.fly.fmt.time">
+        function <span class="apidocSignatureSpan">fly.fmt.</span>time
+        <span class="apidocSignatureSpan">{{signature}}</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">[32m[39m</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		.on(&#x22;task_start&#x22;, str =&#x3e; {
+			$.log(`Starting ${fmt.title(str)}`)
+		})
+
+		.on(&#x22;task_complete&#x22;, (str, time) =&#x3e; {
+			const t = formatTime(time)
+			$.log(`Finished ${fmt.complete(str)} in ${fmt.<span class="apidocCodeKeywordSpan">time</span>(t)}`)
+		})
+
+		.on(&#x22;task_not_found&#x22;, str =&#x3e; {
+			$.log(`${fmt.error(str)} not found in Flyfile.`)
+			process.exit(1)
+		})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fmt.title" id="apidoc.element.fly.fmt.title">
+        function <span class="apidocSignatureSpan">fly.fmt.</span>title
+        <span class="apidocSignatureSpan">{{signature}}</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">[1m[33m[39m</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			let str = `${fmt.warn(&#x22;Warning:&#x22;)} Source did not match any files!`
+			str += `\n\t  Patterns:   ${JSON.stringify(globs)}`
+			opts &#x26;&#x26; (str += `\n\t  Options:    ${JSON.stringify(opts)}`)
+			$.log(str)
+		})
+
+		.on(&#x22;plugin_load&#x22;, obj =&#x3e; {
+			$.log(`Loading plugin ${fmt.<span class="apidocCodeKeywordSpan">title</span>(obj.plugin)}`)
+		})
+
+		.on(&#x22;plugin_load_error&#x22;, str =&#x3e; {
+			$.log(`Problem loading plugin: ${fmt.title(str)}`)
+		})
+
+		.on(&#x22;plugin_rename&#x22;, (old, nxt) =&#x3e; {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fmt.warn" id="apidoc.element.fly.fmt.warn">
+        function <span class="apidocSignatureSpan">fly.fmt.</span>warn
+        <span class="apidocSignatureSpan">{{signature}}</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">[1m[35m[39m</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		.on(&#x22;flyfile_not_found&#x22;, () =&#x3e; {
+			$.log(&#x22;Flyfile not found!&#x22;)
+			process.exit(1)
+		})
+
+		.on(&#x22;fly_watch&#x22;, () =&#x3e; {
+			$.log(`${fmt.<span class="apidocCodeKeywordSpan">warn</span>(&#x22;Watching files...&#x22;)}`)
+		})
+
+		.on(&#x22;fly_watch_event&#x22;, obj =&#x3e; {
+			$.log(`File ${obj.action}: ${fmt.warn(obj.file)}`)
+		})
+
+		.on(&#x22;globs_no_match&#x22;, (globs, opts) =&#x3e; {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fly.fn" id="apidoc.module.fly.fn">module fly.fn</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fn.flatten" id="apidoc.element.fly.fn.flatten">
+        function <span class="apidocSignatureSpan">fly.fn.</span>flatten
+        <span class="apidocSignatureSpan">(arr, [])</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arr =&#x3e; flat(arr, [])</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+Task.prototype.run = co(function * (opts, func) {
+	return yield wrapp(opts, func).call(this)
+})
+
+Task.prototype.source = co(function * (globs, opts) {
+	globs = $.<span class="apidocCodeKeywordSpan">flatten</span>($.toArray(globs))
+	const files = yield this.$.expand(globs, opts)
+
+	if (globs.length &#x26;&#x26; !files.length) {
+		this.emit(&#x22;globs_no_match&#x22;, globs, opts)
+	}
+
+	// pre-fetch each file&#x22;s content
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fn.formatTime" id="apidoc.element.fly.fn.formatTime">
+        function <span class="apidocSignatureSpan">fly.fn.</span>formatTime
+        <span class="apidocSignatureSpan">(arr[1] / 1000000)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arr =&#x3e; {
+	let unit = &#x22;ms&#x22;
+	let num = Math.round(arr[1] / 1000000)
+	if (arr[0] &#x3e; 0) {
+		unit = &#x22;s&#x22;
+		num = (arr[0] + num / 1000).toFixed(2)
+	}
+	return `${num}${unit}`
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fn.getTime" id="apidoc.element.fly.fn.getTime">
+        function <span class="apidocSignatureSpan">fly.fn.</span>getTime
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; new Date().toTimeString(&#x22;UTC&#x22;).match(/[^\s]+/)[0]</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fn.getUniques" id="apidoc.element.fly.fn.getUniques">
+        function <span class="apidocSignatureSpan">fly.fn.</span>getUniques
+        <span class="apidocSignatureSpan">(; i &#x3c; len; i++)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arr =&#x3e; {
+	const len = arr.length
+	const res = []
+	let i = 0
+
+	for (; i &#x3c; len; i++) {
+		const curr = arr[i]
+		if (res.indexOf(curr) === -1) {
+			res.push(curr)
+		}
+	}
+
+	return res
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fn.isEmptyObj" id="apidoc.element.fly.fn.isEmptyObj">
+        function <span class="apidocSignatureSpan">fly.fn.</span>isEmptyObj
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">val =&#x3e; $.isObject(val) &#x26;&#x26; !Object.keys(val).length</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fn.isObject" id="apidoc.element.fly.fn.isObject">
+        function <span class="apidocSignatureSpan">fly.fn.</span>isObject
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">val =&#x3e; Boolean(val) &#x26;&#x26; (val.constructor === Object)</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x22;use strict&#x22;
+
+const $ = exports
+
+// @see http://stackoverflow.com/a/16608074
+$.isObject = val =&#x3e; Boolean(val) &#x26;&#x26; (val.constructor === Object)
+
+$.isEmptyObj = val =&#x3e; $.<span class="apidocCodeKeywordSpan">isObject</span>(val) &#x26;&#x26; !Object.keys(val).length
+
+$.toArray = val =&#x3e; (val === null || val === undefined) ? [] : Array.isArray(val) ? val : [val]
+
+/**
+* Format a task&#x27;s duration.
+* @param  {Array} arr  Output from `process.hrtime`
+* @return {String}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fn.toArray" id="apidoc.element.fly.fn.toArray">
+        function <span class="apidocSignatureSpan">fly.fn.</span>toArray
+        <span class="apidocSignatureSpan">(val === null || val === undefined)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">val =&#x3e; (val === null || val === undefined) ? [] : Array.isArray(val) ? val : [val]</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+Task.prototype.run = co(function * (opts, func) {
+	return yield wrapp(opts, func).call(this)
+})
+
+Task.prototype.source = co(function * (globs, opts) {
+	globs = $.flatten($.<span class="apidocCodeKeywordSpan">toArray</span>(globs))
+	const files = yield this.$.expand(globs, opts)
+
+	if (globs.length &#x26;&#x26; !files.length) {
+		this.emit(&#x22;globs_no_match&#x22;, globs, opts)
+	}
+
+	// pre-fetch each file&#x22;s content
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.fn.valUniq" id="apidoc.element.fly.fn.valUniq">
+        function <span class="apidocSignatureSpan">fly.fn.</span>valUniq
+        <span class="apidocSignatureSpan">(val, arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(val, arr) =&#x3e; {
+	let n = 0
+	let v = val
+	while (arr.indexOf(v) !== -1) {
+		n++
+		v = val.concat(n)
+	}
+	return v
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fly.plugins" id="apidoc.module.fly.plugins">module fly.plugins</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fly.plugins.getDependencies" id="apidoc.element.fly.plugins.getDependencies">
+        function <span class="apidocSignatureSpan">fly.plugins.</span>getDependencies
+        <span class="apidocSignatureSpan">(pkg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDependencies(pkg) {
+	if (!pkg) {
+		return []
+	}
+
+	if (!isObject(pkg)) {
+		$.error(&#x22;Content from `package.json` must be an `Object`!&#x22;)
+		return []
+	}
+
+	// get all possible dependencies
+	const deps = [&#x22;dependencies&#x22;, &#x22;devDependencies&#x22;, &#x22;peerDependencies&#x22;]
+		.filter(key =&#x3e; key in pkg).map(dep =&#x3e; Object.keys(pkg[dep]))
+
+	return flatten(deps)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.plugins.getPackage" id="apidoc.element.fly.plugins.getPackage">
+        function <span class="apidocSignatureSpan">fly.plugins.</span>getPackage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPackage = function () {
+    var generator = generatorFunction.apply(this, arguments);
+    var spawn = new PromiseSpawn$(undefined, undefined, yieldHandler,
+                                  stack);
+    var ret = spawn.promise();
+    spawn._generator = generator;
+    spawn._promiseFulfilled(undefined);
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.plugins.load" id="apidoc.element.fly.plugins.load">
+        function <span class="apidocSignatureSpan">fly.plugins.</span>load
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function () {
+    var generator = generatorFunction.apply(this, arguments);
+    var spawn = new PromiseSpawn$(undefined, undefined, yieldHandler,
+                                  stack);
+    var ret = spawn.promise();
+    spawn._generator = generator;
+    spawn._promiseFulfilled(undefined);
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fly.task" id="apidoc.module.fly.task">module fly.task</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fly.task.task" id="apidoc.element.fly.task.task">
+        function <span class="apidocSignatureSpan">fly.</span>task
+        <span class="apidocSignatureSpan">(fly)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Task(fly) {
+	// construct shape
+	this.$ = util
+	this.root = fly.root
+	this._ = {files: [], globs: [], prevs: []}
+	// attach parent fns to Task
+	this.parallel = fly.parallel.bind(fly)
+	this.serial = fly.serial.bind(fly)
+	this.start = fly.start.bind(fly)
+	this.emit = fly.emit.bind(fly)
+	// attach `fly.plugins` to prototype
+	for (const k in fly.plugins) {
+		this[k] = fly.plugins[k].bind(this)
+	}
+	// return chained methods + shared
+	return boot(this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fly.task.prototype" id="apidoc.module.fly.task.prototype">module fly.task.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fly.task.prototype.exec" id="apidoc.element.fly.task.prototype.exec">
+        function <span class="apidocSignatureSpan">fly.task.prototype.</span>exec
+        <span class="apidocSignatureSpan">(fn, opts, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exec = function (fn, opts, data) {
+	// cache ref to `fly.tasks[].data` values
+	this._ = data
+	return fn.call(this, this, opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.task.prototype.run" id="apidoc.element.fly.task.prototype.run">
+        function <span class="apidocSignatureSpan">fly.task.prototype.</span>run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function () {
+    var generator = generatorFunction.apply(this, arguments);
+    var spawn = new PromiseSpawn$(undefined, undefined, yieldHandler,
+                                  stack);
+    var ret = spawn.promise();
+    spawn._generator = generator;
+    spawn._promiseFulfilled(undefined);
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+&#x3e; **Note:** Inline plugins have no need for a second argument in their generator function; you are the &#x22;user&#x22; here
+.
+
+See [`task.run`](#taskrunoptions-generator) for a simple example. The same inline example may be written purely as an object:
+
+```js
+exports.foo = function * (fly) {
+  yield fly.source(&#x22;src/*.js&#x22;).<span class="apidocCodeKeywordSpan">run</span>({
+    every: false,
+    *func(files) {
+      Array.isArray(files) //=&#x3e; true
+      yield Promise.resolve(&#x22;this will run once.&#x22;)
+    }
+  }).target(&#x22;dist&#x22;)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.task.prototype.source" id="apidoc.element.fly.task.prototype.source">
+        function <span class="apidocSignatureSpan">fly.task.prototype.</span>source
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">source = function () {
+    var generator = generatorFunction.apply(this, arguments);
+    var spawn = new PromiseSpawn$(undefined, undefined, yieldHandler,
+                                  stack);
+    var ret = spawn.promise();
+    spawn._generator = generator;
+    spawn._promiseFulfilled(undefined);
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+const sass = &#x22;src/{admin,client}/*.sass&#x22;
+const js = &#x22;src/{admin,client}/*.js&#x22;
+const dist = &#x22;build&#x22;
+
+module.exports = {
+*lint(fly) {
+  yield fly.<span class="apidocCodeKeywordSpan">source</span>(js).xo({ esnext: true })
+},
+*scripts(fly) {
+  yield fly.source(js).babel({ presets: [&#x22;es2015&#x22;] }).target(`${dist}/js`)
+},
+*styles(fly) {
+  yield fly.source(sass).sass({ outputStyle: &#x22;compressed&#x22; }).autoprefixer().target(`${dist}/css`)
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fly.task.prototype.target" id="apidoc.element.fly.task.prototype.target">
+        function <span class="apidocSignatureSpan">fly.task.prototype.</span>target
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">target = function () {
+    var generator = generatorFunction.apply(this, arguments);
+    var spawn = new PromiseSpawn$(undefined, undefined, yieldHandler,
+                                  stack);
+    var ret = spawn.promise();
+    spawn._generator = generator;
+    spawn._promiseFulfilled(undefined);
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const dist = &#x22;build&#x22;
+
+module.exports = {
+*lint(fly) {
+  yield fly.source(js).xo({ esnext: true })
+},
+*scripts(fly) {
+  yield fly.source(js).babel({ presets: [&#x22;es2015&#x22;] }).<span class="apidocCodeKeywordSpan">target</span>(`${dist}/js`)
+},
+*styles(fly) {
+  yield fly.source(sass).sass({ outputStyle: &#x22;compressed&#x22; }).autoprefixer().target(`${dist}/css`)
+},
+*build(fly) {
+  yield fly.parallel([&#x22;lint&#x22;, &#x22;scripts&#x22;, &#x22;styles&#x22;])
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
